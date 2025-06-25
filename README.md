@@ -1,3 +1,14 @@
+# Introduction
+This repository describes how to run wordpress in docker usind different methods.
+ - [Run Wordpress with docker command](#run-wordpress-with-docker-command)
+ - [Wordpress Dev Environment](#wordpress-dev-environment)
+ - [Wordpress Nginx Letsencrypt Docker Compose Version](#wordpress-nginx-letsencrypt-docker-compose-version)
+ - [Bitnami Wordpress Traefik Letsencrypt Version](#bitnami-wordpress-traefik-letsencrypt-version)
+
+
+---
+
+
 # Run Wordpress with docker command
 Based on the official Wordpress docker image:
  - [Official wordpress docker image](https://hub.docker.com/_/wordpress)
