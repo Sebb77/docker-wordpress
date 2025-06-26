@@ -4,6 +4,7 @@ This repository describes how to run wordpress in docker usind different methods
  - [Wordpress Dev Environment](#wordpress-dev-environment)
  - [Wordpress Nginx Letsencrypt Docker Compose Version](#wordpress-nginx-letsencrypt-docker-compose-version)
  - [Bitnami Wordpress Traefik Letsencrypt Version](#bitnami-wordpress-traefik-letsencrypt-version)
+ - [Running a simple PHP apache server for testing](#running-a-simple-php-apache-server-for-testing)
 
 
 ---
@@ -196,3 +197,13 @@ mysql -u root -p${WORDPRESS_DB_ADMIN_PASSWORD} ${WORDPRESS_DB_NAME} < wordpress_
 
 
 ---
+
+
+# [Running a simple PHP apache server for testing](./sample-apache-php/)
+The best way to achieve this is by using docker-compose. However this version will use a single docker command and install a basic apache server with php installed.
+
+To run a PHP apache server in a docker container run the following command:
+```bash
+docker run -d --name php --restart always -p 8090:80 -v ./sample-apache-php:/var/www/html php:8.4.8-apache
+```
+The server can be accessed by going to http://localhost:8090 and the page should return the installed php information.
